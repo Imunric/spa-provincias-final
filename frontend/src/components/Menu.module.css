@@ -1,0 +1,24 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  color: white;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #1f2933;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+/* Contenido central */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #e5e7eb;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

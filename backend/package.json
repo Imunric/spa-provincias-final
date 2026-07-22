@@ -1,0 +1,14 @@
+{
+  "name": "backend-provincias",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "sequelize": "^6.37.0",
+    "mysql2": "^3.11.0"
+  }
+}

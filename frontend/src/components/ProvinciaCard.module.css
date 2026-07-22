@@ -1,0 +1,40 @@
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 220px;
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
+}
+
+.imageContainer {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detailLink {
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.detailLink {
+  transition: all 0.2s ease;
+}
+
+.detailLink:hover {
+  transform: translateY(-2px);
+  color: var(--primary);
+}
