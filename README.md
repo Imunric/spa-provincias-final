@@ -20,7 +20,9 @@ Más allá de la funcionalidad implementada, este proyecto me ha servido para co
 
 ## 📸 Vista previa de la aplicación
 
-> Aquí se añadirá una captura de pantalla de la aplicación.
+La página principal muestra las cinco provincias de Castilla-La Mancha mediante tarjetas informativas. Desde cada una de ellas es posible acceder a la vista de detalle, donde se puede consultar información adicional mediante un enlace a la Wikipedia, se presenta el mapa y el escudo heráldico ampliado, representativo de la provincia.
+
+![Página principal de la aplicación](docs/images/home.png)
 
 ---
 
