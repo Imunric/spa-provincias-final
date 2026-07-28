@@ -14,7 +14,7 @@ Los datos se almacenan en una base de datos MySQL, utilizando Sequelize como ORM
 
 La aplicación permite consultar información de las cinco provincias de Castilla-La Mancha, mostrando datos como la capital, la población, la superficie, así como mapas y escudos representativos de cada provincia.
 
-Más allá de la funcionalidad implementada, este proyecto ha servido para consolidar conocimientos sobre el desarrollo de aplicaciones Full-Stack, el diseño de APIs REST, la organización modular del código, el uso de React Router para la navegación, la gestión de peticiones HTTP mediante Axios y la utilización de Git y GitHub como herramientas de control de versiones y documentación del proyecto.
+Más allá de la funcionalidad implementada, este proyecto me ha servido para consolidar mis conocimientos sobre el desarrollo de aplicaciones Full-Stack, el diseño de APIs REST, la organización modular del código, el uso de React Router para la navegación, la gestión de peticiones HTTP mediante Axios, la realización de pruebas con Postman y la utilización de Git y GitHub como herramientas de control de versiones y documentación del proyecto.
 
 ---
 
