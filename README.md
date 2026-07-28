@@ -6,7 +6,15 @@
 
 ## 📖 Descripción del proyecto
 
-> Pendiente de completar.
+Este proyecto consiste en una Single Page Application (SPA) desarrollada como práctica de desarrollo Full-Stack, con el objetivo de aplicar una arquitectura moderna basada en la separación entre frontend y backend, así como poner en práctica el consumo de una API REST propia.
+
+El frontend, desarrollado con React y Vite, ofrece una interfaz dinámica e intuitiva que permite navegar entre las distintas provincias de Castilla-La Mancha sin necesidad de recargar la página. La aplicación consume una API REST implementada con Node.js y Express, responsable de gestionar las peticiones y proporcionar la información solicitada por el cliente.
+
+Los datos se almacenan en una base de datos MySQL, utilizando Sequelize como ORM para facilitar el acceso y la gestión de la información de forma estructurada y mantenible.
+
+La aplicación permite consultar información de las cinco provincias de Castilla-La Mancha, mostrando datos como la capital, la población, la superficie, así como mapas y escudos representativos de cada provincia.
+
+Más allá de la funcionalidad implementada, este proyecto ha servido para consolidar conocimientos sobre el desarrollo de aplicaciones Full-Stack, el diseño de APIs REST, la organización modular del código, el uso de React Router para la navegación, la gestión de peticiones HTTP mediante Axios y la utilización de Git y GitHub como herramientas de control de versiones y documentación del proyecto.
 
 ---
 
