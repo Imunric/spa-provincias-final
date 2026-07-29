@@ -104,19 +104,54 @@ Entre sus principales funcionalidades destacan:
 
 ## 🛠️ Tecnologías utilizadas
 
+Las tecnologías empleadas en este proyecto se presentan agrupadas según la capa de la aplicación en la que intervienen. Esta organización permite comprender de forma rápida la arquitectura del proyecto y el papel que desempeña cada herramienta dentro del desarrollo.
+
 ### Frontend
 
-> Pendiente de completar.
+| Tecnología | Descripción |
+|------------|-------------|
+| **JavaScript (ES6+)** | Lenguaje de programación utilizado para desarrollar la lógica de la aplicación en el frontend y el backend. |
+| **HTML5** | Lenguaje de marcado empleado para estructurar las páginas de la aplicación. |
+| **CSS3** | Lenguaje de estilos utilizado para el diseño y la presentación visual de la interfaz. |
+| **React** | Biblioteca JavaScript utilizada para construir la interfaz de usuario mediante componentes reutilizables. |
+| **Vite** | Herramienta de desarrollo y empaquetado que proporciona un entorno rápido y optimizado para aplicaciones React. |
+| **React Router** | Biblioteca utilizada para gestionar la navegación entre las distintas vistas de la SPA sin recargar la página. |
+| **Axios** | Cliente HTTP utilizado para consumir la API REST desde el frontend. |
+| **CSS Modules** | Sistema de estilos modulares que evita conflictos entre clases CSS y mejora el mantenimiento del código. |
 
 ### Backend
 
-> Pendiente de completar.
+| Tecnología | Descripción |
+|------------|-------------|
+| **Node.js** | Entorno de ejecución que permite desarrollar el servidor utilizando JavaScript. |
+| **Express** | Framework utilizado para crear la API REST y gestionar las peticiones HTTP. |
+| **Sequelize** | ORM (*Object-Relational Mapping*) que facilita el acceso a la base de datos mediante modelos de JavaScript. |
+| **MySQL** | Sistema gestor de bases de datos relacional donde se almacena la información de las provincias. |
 
 ### Herramientas
 
-> Pendiente de completar.
+| Herramienta | Descripción |
+|-------------|-------------|
+| **Git** | Sistema de control de versiones utilizado para gestionar el historial del proyecto. |
+| **GitHub** | Plataforma empleada para alojar el repositorio y facilitar la colaboración y el seguimiento del desarrollo. |
+| **Visual Studio Code** | Editor de código utilizado durante el desarrollo de la aplicación. |
+| **Postman** | Herramienta utilizada para probar y verificar los endpoints de la API REST. |
+| **pnpm** | Gestor de paquetes empleado para instalar y administrar las dependencias del proyecto. |
+| **XAMPP** | Entorno local utilizado para ejecutar el servidor MySQL durante el desarrollo. |
 
 ---
+
+### 📋 Resumen del stack tecnológico
+
+| Capa | Tecnologías |
+|------|-------------|
+| **Frontend** | JavaScript (ES6+) · HTML5 · CSS3 · React · Vite · React Router · Axios · CSS Modules |
+| **Backend** | Node.js · Express · Sequelize · MySQL |
+| **Herramientas** | Git · GitHub · Visual Studio Code · Postman · pnpm · XAMPP |
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,html,css,react,vite,nodejs,express,mysql,git,github,vscode,postman" />
+</p>
 
 ## 📁 Estructura del proyecto
 
