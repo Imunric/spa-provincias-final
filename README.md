@@ -28,7 +28,63 @@ La página principal muestra las cinco provincias de Castilla-La Mancha mediante
 
 ## 🏗️ Arquitectura de la aplicación
 
-> Aquí se incluirá un diagrama mostrando la comunicación entre el frontend, la API REST y la base de datos.
+La aplicación sigue una arquitectura **Full-Stack** basada en la separación de responsabilidades entre el cliente (frontend), el servidor (backend) y la base de datos.
+
+```text
+                 Usuario
+                     │
+                     ▼
+        ┌─────────────────────┐
+        │ React + Vite (SPA)  │
+        │ Frontend            │
+        └─────────────────────┘
+                     │
+             Peticiones HTTP
+                 (Axios)
+                     │
+                     ▼
+        ┌─────────────────────┐
+        │ Node.js + Express   │
+        │ API REST            │
+        └─────────────────────┘
+                     │
+                Sequelize ORM
+                     │
+                     ▼
+        ┌─────────────────────┐
+        │ MySQL               │
+        │ Base de datos       │
+        └─────────────────────┘
+```
+
+### Separación entre frontend y backend
+
+El proyecto se ha diseñado separando claramente el **frontend** del **backend**, una práctica habitual en el desarrollo de aplicaciones modernas.
+
+El frontend es responsable de la interfaz de usuario y de la experiencia de navegación, mientras que el backend centraliza la lógica de negocio, el acceso a los datos y la gestión de las peticiones realizadas por la aplicación.
+
+Esta separación facilita el mantenimiento del código, permite desarrollar ambos módulos de forma independiente y favorece la escalabilidad del proyecto.
+
+### ¿Por qué utilizar una API REST?
+
+En lugar de permitir que el frontend acceda directamente a la base de datos, la comunicación se realiza mediante una **API REST** desarrollada con Express.
+
+Este enfoque aporta varias ventajas:
+
+- Protege la base de datos evitando accesos directos desde el cliente.
+- Centraliza la lógica de negocio en un único punto.
+- Facilita la validación y el tratamiento de los datos antes de enviarlos al frontend.
+- Permite que otros clientes (por ejemplo, una aplicación móvil) puedan reutilizar la misma API en el futuro.
+
+En este proyecto, el frontend consume los endpoints de la API mediante Axios para obtener la lista de provincias y consultar la información detallada de cada una de ellas. De esta forma, la interfaz de usuario permanece desacoplada de la base de datos y toda la comunicación se realiza a través del servidor.
+
+### ¿Por qué Sequelize?
+
+Para el acceso a la base de datos se ha utilizado **Sequelize**, un ORM (*Object-Relational Mapping*) para Node.js.
+
+Sequelize permite trabajar con modelos de JavaScript en lugar de escribir consultas SQL para las operaciones habituales, lo que hace que el código sea más legible, mantenible y portable.
+
+Además, facilita tareas como la definición de modelos, las relaciones entre entidades y la sincronización con la base de datos, reduciendo la posibilidad de errores y mejorando la organización del proyecto.
 
 ---
 
