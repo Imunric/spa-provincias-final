@@ -90,7 +90,15 @@ Además, facilita tareas como la definición de modelos, las relaciones entre en
 
 ## ✨ Funcionalidades
 
-> Pendiente de completar.
+La aplicación permite consultar de forma sencilla la información de las provincias de Castilla-La Mancha mediante una interfaz moderna desarrollada como Single Page Application (SPA).
+
+Entre sus principales funcionalidades destacan:
+
+- **Visualización del listado de provincias**, presentado mediante tarjetas con información resumida.
+- **Consulta del detalle de cada provincia**, mostrando datos como la capital, la población, la superficie, el mapa geográfico, el escudo heráldico representativo y enlace para ampliar información en Wikipedia.
+- **Navegación fluida entre vistas** mediante React Router, evitando recargas completas de la página.
+- **Obtención dinámica de los datos** a través de una API REST desarrollada con Node.js y Express.
+- **Presentación responsive**, adaptando la interfaz a diferentes tamaños de pantalla para mejorar la experiencia de usuario.
 
 ---
 
