@@ -242,7 +242,46 @@ Esta separación evita mezclar los recursos de la documentación con los archivo
 
 ## ⚙️ Instalación
 
-> Pendiente de completar.
+El proyecto está dividido en dos aplicaciones independientes: un frontend desarrollado con React y un backend desarrollado con Node.js y Express. Por este motivo, las dependencias deben instalarse por separado en cada uno de los directorios.
+
+Sigue los siguientes pasos para ejecutar el proyecto en un entorno de desarrollo local.
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/Imunric/spa-provincias-final.git
+cd spa-provincias-final
+```
+
+### 2. Instalar las dependencias del backend
+
+```bash
+cd backend
+pnpm install
+```
+
+### 3. Instalar las dependencias del frontend
+
+```bash
+cd ../frontend
+pnpm install
+```
+
+Una vez completados estos pasos, estarán instaladas todas las dependencias necesarias para ejecutar la aplicación tanto en el frontend como en el backend.
+
+> **Nota:** Este proyecto utiliza **pnpm** como gestor de paquetes. Si no lo tienes instalado, puedes hacerlo previamente con:
+
+```bash
+npm install -g pnpm
+```
+### Requisitos
+
+Para el desarrollo de este proyecto se han utilizado las siguientes versiones:
+
+- Node.js 22.x
+- pnpm 10.x
+- MySQL 8.x
+- Git 2.x
 
 ---
 
