@@ -155,7 +155,88 @@ Las tecnologías empleadas en este proyecto se presentan agrupadas según la cap
 
 ## 📁 Estructura del proyecto
 
-> Pendiente de completar.
+El proyecto se organiza siguiendo una arquitectura **Full-Stack**, separando claramente el frontend y el backend en directorios independientes. Esta organización facilita el mantenimiento, la escalabilidad y la comprensión del código, permitiendo desarrollar cada parte de la aplicación de forma desacoplada.
+
+```text
+spa-provincias-final/
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── database.js
+│   │   ├── controllers/
+│   │   │   └── provincias.controller.js
+│   │   ├── models/
+│   │   │   └── provincia.js
+│   │   ├── routes/
+│   │   │   └── provincias.routes.js
+│   │   ├── seed/
+│   │   │   ├── index.js
+│   │   │   └── provincias.seed.js
+│   │   └── index.js
+│   ├── package.json
+│   └── pnpm-lock.yaml
+│
+├── docs/
+│   └── images/
+│
+├── frontend/
+│   ├── public/
+│   │   ├── favicon-spain.svg
+│   │   └── img/
+│   │       ├── escudos/
+│   │       └── mapas/
+│   │
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── router/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   ├── .env.example
+│   ├── package.json
+│   └── pnpm-lock.yaml
+│
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── pnpm-lock.yaml
+└── vite.config.js
+```
+
+### Organización del backend
+
+El backend concentra la lógica de negocio y el acceso a los datos. Se estructura siguiendo una organización modular basada en responsabilidades:
+
+- **config/**: configuración de la conexión con la base de datos.
+- **controllers/**: implementación de la lógica que procesa las peticiones HTTP.
+- **models/**: definición de los modelos de datos mediante Sequelize.
+- **routes/**: definición de los endpoints de la API REST.
+- **seed/**: carga inicial de datos para la base de datos.
+- **index.js**: punto de entrada del servidor Express.
+
+### Organización del frontend
+
+La organización del frontend sigue una estructura basada en responsabilidades, donde cada directorio agrupa archivos con una finalidad específica. Este enfoque favorece la reutilización de componentes, mejora la mantenibilidad del código y facilita la incorporación de nuevas funcionalidades conforme el proyecto evoluciona.
+
+Esta estructura modular es propia de aplicaciones React:
+
+- **api/**: funciones encargadas de comunicarse con la API REST.
+- **components/**: componentes reutilizables de la interfaz de usuario.
+- **pages/**: páginas principales de la aplicación.
+- **router/**: configuración de React Router y definición de las rutas.
+- **utils/**: funciones auxiliares reutilizables.
+- **public/**: recursos estáticos como imágenes, mapas y escudos.
+
+### Documentación
+
+El directorio **docs/** almacena los recursos utilizados en la documentación del proyecto, como las capturas de pantalla y otros elementos gráficos empleados en este README.
+
+Esta separación evita mezclar los recursos de la documentación con los archivos propios de la aplicación.
 
 ---
 
