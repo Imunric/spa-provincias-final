@@ -287,7 +287,89 @@ Para el desarrollo de este proyecto se han utilizado las siguientes versiones:
 
 ## 🔧 Configuración
 
-> Pendiente de completar.
+Una vez instaladas las dependencias, es necesario realizar una serie de configuraciones para que el frontend pueda comunicarse correctamente con el backend y este, a su vez, con la base de datos.
+
+### 1. Configurar la base de datos
+
+Asegúrate de tener un servidor MySQL en funcionamiento y crea una base de datos denominada:
+
+```sql
+CREATE DATABASE provinciasdb;
+```
+
+### 2. Configurar la conexión del backend
+
+Revisa el archivo:
+
+```text
+backend/src/config/database.js
+```
+
+y verifica que los parámetros de conexión coinciden con tu instalación de MySQL:
+
+- Host
+- Puerto
+- Usuario
+- Contraseña
+- Nombre de la base de datos
+
+Por ejemplo:
+
+```javascript
+database: 'provinciasdb',
+username: 'root',
+password: '',
+host: 'localhost',
+port: 3307
+```
+
+> **Nota:** En este proyecto se utiliza el puerto **3307**, ya que durante el desarrollo se configuró MySQL en XAMPP para evitar conflictos con otras instalaciones locales.
+
+### 3. Cargar los datos iniciales
+
+El proyecto incluye un script de inicialización (seed) que inserta automáticamente la información de las cinco provincias de Castilla-La Mancha. Esto evita tener que introducir los datos manualmente y garantiza que todos los desarrolladores trabajen con el mismo conjunto de datos desde el primer momento.
+
+Con la base de datos creada, ejecuta el script de inicialización para cargar la información de las provincias:
+
+```bash
+cd backend
+pnpm run seed
+```
+
+Este proceso creará los registros iniciales necesarios para el funcionamiento de la aplicación.
+
+### 4. Configurar las variables de entorno del frontend
+
+Dentro del directorio `frontend` encontrarás el archivo:
+
+```text
+.env.example
+```
+
+Crea una copia denominada:
+
+```text
+.env
+```
+
+y verifica que contiene la configuración adecuada:
+
+```env
+VITE_API_BASE_URL=http://localhost:3000
+VITE_IMAGES_BASE_URL=/
+```
+
+Estas variables indican la dirección del servidor backend y la ruta utilizada para acceder a los recursos estáticos desde el frontend.
+
+### 5. Comprobar la configuración
+
+Antes de ejecutar la aplicación, verifica que:
+
+- El servidor MySQL está en funcionamiento.
+- La base de datos `provinciasdb` existe.
+- Los datos iniciales han sido cargados correctamente.
+- El archivo `.env` está configurado.
+- El backend podrá iniciarse en el puerto **3000**.
 
 ---
 
