@@ -375,7 +375,74 @@ Antes de ejecutar la aplicación, verifica que:
 
 ## ▶️ Ejecución del proyecto
 
-> Pendiente de completar.
+Una vez completada la instalación y la configuración, inicia por separado el backend y el frontend.
+
+### 1. Iniciar el backend
+
+Abre una terminal y ejecuta:
+
+```bash
+cd backend
+pnpm run start
+```
+
+Si todo es correcto, la consola mostrará un resultado similar al siguiente:
+
+```text
+Base de datos conectada y sincronizada
+Servidor escuchando en http://localhost:3000
+```
+
+Estos mensajes indican que:
+
+- La conexión con MySQL se ha establecido correctamente.
+- Sequelize ha sincronizado los modelos con la base de datos.
+- El servidor Express está en funcionamiento y preparado para recibir peticiones.
+
+---
+
+### 2. Iniciar el frontend
+
+Abre una segunda terminal y ejecuta:
+
+```bash
+cd frontend
+pnpm run dev
+```
+
+La consola mostrará un mensaje similar a:
+
+```text
+VITE v7.x.x ready in XXX ms
+
+➜  Local:   http://localhost:5173/
+```
+
+Esto indica que el servidor de desarrollo de Vite está funcionando correctamente.
+
+---
+
+### 3. Acceder a la aplicación
+
+Abre el navegador y accede a:
+
+```text
+http://localhost:5173
+```
+
+---
+
+### ✔️ Verificación rápida
+
+Si la instalación y la configuración se han realizado correctamente, deberías comprobar que:
+
+- El backend muestra los mensajes:
+  - `Base de datos conectada y sincronizada`
+  - `Servidor escuchando en http://localhost:3000`
+- El frontend se inicia sin errores y Vite indica la dirección local de la aplicación.
+- La página principal muestra las cinco provincias de Castilla-La Mancha.
+- Al seleccionar una provincia se accede correctamente a la vista de detalle.
+- La información se obtiene correctamente desde la API REST.
 
 ---
 
