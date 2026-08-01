@@ -448,7 +448,229 @@ Si la instalación y la configuración se han realizado correctamente, deberías
 
 ## 🌐 API REST
 
-> Pendiente de completar.
+El backend expone una **API REST** desarrollada con **Node.js**, **Express** y **Sequelize**, encargada de gestionar la información de las provincias de Castilla-La Mancha y suministrarla al frontend desarrollado con React.
+
+Una vez iniciado el servidor, la API estará disponible en:
+
+```text
+http://localhost:3000
+```
+
+### Comprobación inicial
+
+La ruta principal permite comprobar rápidamente que el servidor Express está funcionando correctamente.
+
+**Petición**
+
+```http
+GET http://localhost:3000/
+```
+
+**Respuesta esperada**
+
+```text
+API de provincias de España
+```
+
+---
+
+### Endpoints disponibles
+
+| Método | Endpoint | Descripción |
+|---------|----------|-------------|
+| **GET** | `/provincias` | Obtiene el listado completo de provincias. |
+| **GET** | `/provincias/:slug` | Obtiene la información de una provincia mediante su *slug*. |
+| **POST** | `/provincias` | Crea una nueva provincia. |
+| **PUT** | `/provincias/:slug` | Actualiza una provincia existente. |
+| **DELETE** | `/provincias/:slug` | Elimina una provincia. |
+
+> **Nota:** Aunque el frontend únicamente utiliza los endpoints de consulta (`GET`), el backend implementa las operaciones básicas de un **CRUD** (Create, Read, Update y Delete), permitiendo ampliar fácilmente la aplicación en futuras versiones.
+
+---
+
+### ¿Qué es un *slug*?
+
+Cada provincia dispone de un identificador textual único (*slug*), utilizado para construir URLs más descriptivas y fáciles de interpretar.
+
+Ejemplos:
+
+```text
+/provincias/albacete
+/provincias/ciudad-real
+/provincias/cuenca
+/provincias/guadalajara
+/provincias/toledo
+```
+
+El uso de *slugs* mejora la legibilidad de las rutas y constituye una práctica habitual en el diseño de APIs REST, evitando depender exclusivamente de identificadores numéricos.
+
+---
+
+### Modelo de datos
+
+Cada provincia almacenada en la base de datos contiene la siguiente información:
+
+| Campo | Tipo | Descripción |
+|--------|------|-------------|
+| `id` | Integer | Identificador interno de la provincia. |
+| `nombre` | String | Nombre de la provincia. |
+| `slug` | String | Identificador único utilizado en las URLs de la API. |
+| `comunidad` | String | Comunidad autónoma a la que pertenece la provincia. |
+| `capital` | String | Capital de la provincia. |
+| `habitantes` | Integer | Número de habitantes. |
+| `superficie` | Integer | Superficie en kilómetros cuadrados. |
+| `imagen_mapa` | String | Nombre del archivo de la imagen del mapa provincial. |
+| `imagen_escudo` | String | Nombre del archivo de la imagen del escudo provincial. |
+
+---
+
+### Ejemplo de respuesta JSON
+
+Una petición realizada al endpoint:
+
+```http
+GET http://localhost:3000/provincias/albacete
+```
+
+devolverá un objeto JSON con una estructura similar a la siguiente:
+
+```json
+{
+  "id":1,
+  "nombre":"Albacete",
+  "slug":"albacete",
+  "comunidad":"Castilla la Mancha",
+  "capital":"Albacete",
+  "habitantes":390751,
+  "superficie":14926,
+  "imagen_mapa":"img/mapas/Albacete.webp",
+  "imagen_escudo":"img/escudos/Escudo_provincia_Albacete.webp"
+}
+
+```
+---
+
+### Consumo de la API desde el frontend
+
+El frontend utiliza **Axios** para comunicarse con la API REST. La configuración del cliente HTTP se centraliza en un único archivo (`provinciasApi.js`), cuya URL base se obtiene mediante variables de entorno.
+
+```javascript
+baseURL: `${import.meta.env.VITE_API_BASE_URL}/provincias`
+```
+
+Actualmente el frontend consume los siguientes endpoints:
+
+| Función | Método HTTP | Endpoint |
+|---------|-------------|----------|
+| Obtener todas las provincias | **GET** | `/provincias` |
+| Obtener una provincia por su *slug* | **GET** | `/provincias/:slug` |
+
+Esta arquitectura desacopla completamente el frontend del backend, permitiendo desarrollar, mantener y desplegar ambos servicios de forma independiente.
+
+---
+
+### Códigos de respuesta HTTP
+
+| Código | Significado |
+|---------|-------------|
+| **200 OK** | La petición se ha procesado correctamente. |
+| **201 Created** | El recurso se ha creado correctamente. |
+| **404 Not Found** | La provincia solicitada no existe. |
+| **500 Internal Server Error** | Se ha producido un error interno en el servidor. |
+
+---
+
+### Comprobación desde el navegador
+
+Con el servidor en funcionamiento, es posible verificar el correcto funcionamiento de la API accediendo a las siguientes direcciones:
+
+| URL | Resultado esperado |
+|-----|--------------------|
+| `http://localhost:3000/` | Muestra el mensaje `API de provincias de España`. |
+| `http://localhost:3000/provincias` | Devuelve el listado completo de provincias en formato JSON. |
+| `http://localhost:3000/provincias/albacete` | Devuelve la información de la provincia de Albacete en formato JSON. |
+
+---
+
+### Comprobación con Postman
+
+La API también puede probarse mediante Postman utilizando los mismos endpoints.
+
+#### Obtener todas las provincias
+
+```http
+GET http://localhost:3000/provincias
+```
+
+#### Obtener una provincia
+
+```http
+GET http://localhost:3000/provincias/albacete
+```
+
+---
+
+### Flujo de una petición
+
+```text
+Usuario
+    │
+    ▼
+React Router
+(/provincia/albacete)
+    │
+    ▼
+ProvinciaDetail.jsx
+    │
+    ▼
+getProvinciaBySlug()
+    │
+    ▼
+Axios
+(baseURL = VITE_API_BASE_URL/provincias)
+    │
+GET /provincias/albacete
+    │
+    ▼
+Express Router
+    │
+    ▼
+provincias.controller.js
+    │
+    ▼
+Modelo Provincia (Sequelize)
+    │
+    ▼
+MySQL
+    │
+Respuesta JSON
+    │
+    ▼
+React renderiza la información
+```
+
+---
+
+### Verificación rápida
+
+La API funciona correctamente cuando:
+
+- El backend muestra los mensajes:
+
+```text
+Base de datos conectada y sincronizada
+Servidor escuchando en http://localhost:3000
+```
+
+- La ruta `http://localhost:3000/` responde con el mensaje:
+
+```text
+API de provincias de España
+```
+
+- La ruta `http://localhost:3000/provincias` devuelve un listado de provincias en formato JSON.
+- La ruta `http://localhost:3000/provincias/albacete` devuelve correctamente la información de la provincia solicitada.
+- El frontend muestra la información de las provincias consumiendo los datos desde la API sin errores.
 
 ---
 
