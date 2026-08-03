@@ -676,7 +676,19 @@ API de provincias de España
 
 ## 📷 Capturas de pantalla
 
-> Próximamente.
+### Vista de detalle
+
+Cada provincia dispone de una página propia donde se muestra información detallada obtenida dinámicamente desde la API REST.
+
+![Vista de detalle](docs/images/provincia-detail.png)
+
+---
+
+### Diseño responsive
+
+La interfaz se adapta automáticamente a distintos tamaños de pantalla, garantizando una experiencia de usuario adecuada tanto en equipos de escritorio como en dispositivos móviles.
+
+![Diseño responsive](docs/images/responsive-mobile.png)
 
 ---
 
