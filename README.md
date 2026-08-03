@@ -711,12 +711,26 @@ Además del aprendizaje técnico, este proyecto me ha permitido entender mejor e
 
 ## 🚀 Mejoras futuras
 
-> Pendiente de completar.
+Este proyecto ha sido desarrollado como trabajo final de una formación en Desarrollo Web y cumple los objetivos funcionales y técnicos planteados. No obstante, como ocurre en cualquier proyecto de software, existen numerosas posibilidades de evolución y mejora.
+
+Entre las posibles líneas de desarrollo futuras podría destacar:
+
+Implementar autenticación y autorización de usuarios para diferenciar distintos niveles de acceso.
+Incorporar validación de datos tanto en el frontend como en el backend para mejorar la robustez de la aplicación.
+Añadir funcionalidades de búsqueda, filtrado y ordenación de provincias.
+Añadir contenido y escalar la aplicación a todas las provincias de España.
+Mejorar el tratamiento de errores y la experiencia de usuario mediante mensajes más descriptivos y estados de carga avanzados.
+Desarrollar una batería de pruebas unitarias y de integración para aumentar la fiabilidad del código.
+Documentar la API mediante herramientas como OpenAPI (Swagger).
+Preparar el proyecto para su despliegue en un entorno de producción utilizando servicios en la nube y un sistema de integración y despliegue continuo (CI/CD).
+Optimizar el rendimiento y la accesibilidad siguiendo las recomendaciones de Lighthouse de Google y las pautas WCAG (Web Content Accessibility Guidelines).
+
+Más allá de estas mejoras concretas, este proyecto representa una base sobre la que continuar aprendiendo, aplicando nuevas tecnologías y buenas prácticas de desarrollo, tanto para ampliar este proyecto o realizar otros proyectos futuros, como ir incorporando funcionalidades y refinando sus arquitecturas a medida que adquiera nuevos conocimientos y experiencia.
 
 ---
 
 ## 👨‍💻 Autor
 
-**Ismael Muñoz**
+**Ismael Muñoz Rico**
 
 Proyecto desarrollado como práctica de desarrollo Full-Stack utilizando React, Node.js, Express y MySQL.
