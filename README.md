@@ -694,7 +694,18 @@ La interfaz se adapta automáticamente a distintos tamaños de pantalla, garanti
 
 ## 📚 Lo que he aprendido
 
-> Pendiente de completar.
+Este proyecto me ha permitido consolidar conocimientos de desarrollo **Full-Stack** mediante la construcción de una aplicación completa, desde el diseño de la interfaz hasta la gestión de los datos.
+
+Durante su desarrollo he aprendido a:
+
+- Diseñar una arquitectura separando el **frontend** y el **backend** mediante una API REST.
+- Consumir servicios web desde React utilizando **Axios** y gestionar la navegación con **React Router**.
+- Desarrollar una API con **Node.js**, **Express** y **Sequelize**, conectándola a una base de datos **MySQL**.
+- Diseñar rutas más descriptivas utilizando **slugs** en lugar de identificadores numéricos.
+- Organizar un proyecto siguiendo una estructura modular y fácil de mantener.
+- Utilizar **Git** y **GitHub** para el control de versiones, documentando el proyecto mediante un README profesional.
+
+Además del aprendizaje técnico, este proyecto me ha permitido entender mejor el flujo completo de una aplicación web moderna, desde la petición realizada por el usuario hasta la obtención y presentación de los datos almacenados en la base de datos. Esto supone para mi, un paso importante en mi transición desde el desarrollo frontend hacia el desarrollo Full-Stack, permitiéndome comprender mejor cómo interactúan todas las capas que componen una aplicación web moderna.
 
 ---
 
